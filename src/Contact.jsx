@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaEnvelope, FaLinkedin, FaGithub, FaPhone } from "react-icons/fa";
 import "./Contact.css";
 
 function Contact() {
@@ -11,17 +11,16 @@ function Contact() {
 
   return (
     <div className={`contact-container ${isLoaded ? "loaded" : ""}`}>
-     <h1 className="contact-heading">Let&apos;s Connect &amp; Build Something Amazing</h1>
-<p className="contact-quote">
-   &quot;Have an idea or just want to say hi? Reach out through the links below!&quot;
-</p>
-
+      <h1 className="contact-heading">LET&apos;S CONNECT &amp; BUILD SOMETHING AMAZING</h1>
+      <p className="contact-quote">
+        &quot;Have an idea or just want to say hi? Reach out through the links below!&quot;
+      </p>
 
       <div className="contact-details">
         <div className="contact-card">
           <p>
             <FaEnvelope className="icon" />
-            <strong>Email: </strong>
+            <strong>Email:</strong>
             <a href="mailto:tsbalasubaramaniyam@gmail.com">
               tsbalasubaramaniyam@gmail.com
             </a>
@@ -31,7 +30,7 @@ function Contact() {
         <div className="contact-card">
           <p>
             <FaLinkedin className="icon" />
-            <strong>LinkedIn: </strong>
+            <strong>LinkedIn:</strong>
             <a
               href="https://www.linkedin.com/in/bala17/"
               target="_blank"
@@ -45,7 +44,7 @@ function Contact() {
         <div className="contact-card">
           <p>
             <FaGithub className="icon" />
-            <strong>GitHub: </strong>
+            <strong>GitHub:</strong>
             <a
               href="https://github.com/BALASUBARAMANIYAM"
               target="_blank"
@@ -53,6 +52,14 @@ function Contact() {
             >
               github.com/BALASUBARAMANIYAM
             </a>
+          </p>
+        </div>
+
+        <div className="contact-card">
+          <p>
+            <FaPhone className="icon" />
+            <strong>Phone:</strong>
+            <a href="tel:+919876543210">+91 9444564468</a>
           </p>
         </div>
       </div>

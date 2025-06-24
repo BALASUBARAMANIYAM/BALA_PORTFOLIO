@@ -64,7 +64,7 @@ function Projects() {
             <p><strong>Tools Used:</strong> ReactJS, Spring Boot, MySQL, RapidAPI, HTML, CSS, JavaScript</p>
           </div>
           <a
-            href="https://github.com/your-github-repo-dealshub"
+            href="https://github.com/BALASUBARAMANIYAM/Dealshub"
             target="_blank"
             rel="noopener noreferrer"
             className="github-link"
