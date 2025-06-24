@@ -1,6 +1,4 @@
-/* App.css */
-
-/* Navbar */
+/* General Navbar Styles */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -29,7 +27,7 @@
   border-radius: 4px;
 }
 
-/* Theme Toggle Button */
+/* Theme toggle button */
 .theme-toggle {
   padding: 8px 15px;
   font-size: 16px;
@@ -45,42 +43,24 @@
   background-color: var(--button-hover-bg-color);
 }
 
-/* Reusable Section Container */
-.section-container {
-  width: 90%;
-  max-width: 1000px;
-  margin: 40px auto;
-  padding: 40px;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  transition: background-color 0.3s ease, color 0.3s ease;
+/* Light theme variables */
+[data-theme="light"] {
+  --navbar-bg-color: #f0f0f0;
+  --link-color: #333;
+  --link-hover-bg: #ddd;
+  --link-hover-color: #000;
+  --button-bg-color: #fff;
+  --button-text-color: #333;
+  --button-hover-bg-color: #ddd;
 }
 
-/* Headings */
-.section-container h1 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-/* Paragraphs */
-.section-container p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  margin-bottom: 20px;
-  text-align: justify;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .section-container {
-    padding: 20px;
-  }
+/* Dark theme variables */
+[data-theme="dark"] {
+  --navbar-bg-color: #333;
+  --link-color: #fff;
+  --link-hover-bg: #444;
+  --link-hover-color: #fff;
+  --button-bg-color: #444;
+  --button-text-color: #fff;
+  --button-hover-bg-color: #555;
 }

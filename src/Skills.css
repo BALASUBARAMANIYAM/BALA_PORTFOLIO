@@ -1,0 +1,203 @@
+/* Base Styles */
+.skills-container {
+  padding: 2rem 1rem;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+  min-height: 100vh;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Mode Styles */
+.skills-container.dark {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.skills-container.dark .skills-box,
+.skills-container.dark .extra-box,
+.skills-container.dark .achievement-box {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.skills-container.dark .skills-box h2,
+.skills-container.dark .extra-box h2,
+.skills-container.dark .achievement-box h2 {
+  color: #4da6ff;
+}
+
+.skills-container.dark .skill-icon,
+.skills-container.dark .cert-icon {
+  color: #4da6ff;
+}
+
+.skills-container.dark a {
+  color: #5ab1ff;
+}
+
+.skills-container.dark .achievement-title {
+  color: #d1d1d1;
+}
+
+.skills-title {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  color: #2c3e50;
+}
+
+.skills-container.dark .skills-title {
+  color: #ffffff;
+}
+
+/* Grid Container */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Card Styles */
+.skills-box,
+.extra-box,
+.achievement-box {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 1.8rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skills-box:hover,
+.extra-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Headings */
+.skills-box h2,
+.extra-box h2,
+.achievement-box h2 {
+  font-size: 1.4rem;
+  color: #2980b9;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Skills List */
+.skills-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.skills-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.skill-icon,
+.cert-icon {
+  font-size: 1.2rem;
+  color: #2980b9;
+  min-width: 24px;
+}
+
+/* Certifications */
+.certification-item {
+  margin-bottom: 1.2rem;
+}
+
+/* Leetcode Section */
+.leetcode-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.leetcode-stats {
+  font-size: 1.1rem;
+}
+
+.leetcode-links a {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+/* Achievements */
+.achievement-box {
+  margin-top: 2rem;
+}
+
+.achievement-box h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 0.5rem;
+}
+
+.achievement-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.achievement-list li {
+  margin-bottom: 1.2rem;
+  line-height: 1.6;
+}
+
+.achievement-title {
+  font-weight: 600;
+  color: #2c3e50;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+
+.skills-container.dark .achievement-title {
+  color: #e0e0e0;
+}
+
+/* Links */
+a {
+  color: #3498db;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #1a73e8;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .achievement-title {
+    margin-bottom: 0.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .skills-title {
+    font-size: 2rem;
+  }
+
+  .skills-container {
+    padding: 1.5rem 1rem;
+  }
+}

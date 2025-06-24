@@ -1,0 +1,183 @@
+/* General Container Styling */
+.projects-container {
+    width: 80%;
+    margin: auto;
+    padding: 40px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(30px); /* Start lower */
+    animation: fadeInUp 1s forwards; /* Smooth slide-in effect */
+}
+
+/* Slide-up animation */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.projects-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: var(--primary-text-color);
+}
+
+/* Projects Wrapper - Stack items vertically */
+.projects-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    width: 100%;
+}
+
+/* Project Box Styling */
+.project-box {
+    background-color: var(--box-bg-color);
+    border-radius: 10px;
+    padding: 25px;
+    width: 80%; /* Increased width */
+    max-width: 900px; /* Make it more rectangular */
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, border 0.2s ease-in-out, box-shadow 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+    border: 2px solid transparent; /* Default border */
+    opacity: 0;
+    transform: translateX(50px); /* Start from right */
+    animation: slideInFromRight 0.8s forwards ease-in-out; /* Slide-in animation */
+}
+
+/* Slide-in animation */
+@keyframes slideInFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Hover Effect with Green Border */
+.project-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    border: 2px solid green; /* Green border on hover */
+}
+
+/* Add Green Border on Click */
+.project-box:active {
+    border: 3px solid green;
+    transform: scale(1.02); /* Slight scale effect on click */
+}
+
+/* Project Content Styling */
+.project-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: var(--secondary-text-color);
+}
+
+.project-content p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: var(--primary-text-color);
+    line-height: 1.6;
+}
+
+/* GitHub Link Styling */
+.github-link {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--accent-color);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-top: auto;
+    gap: 10px;
+    transition: color 0.2s ease-in-out;
+}
+
+.github-icon {
+    font-size: 1.7rem;
+    color: var(--accent-color);
+}
+
+.github-link:hover {
+    color: var(--highlight-color);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .projects-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-box {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-container {
+        width: 90%;
+    }
+
+    .project-box {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .project-content h2 {
+        font-size: 1.6rem;
+    }
+
+    .project-content p {
+        font-size: 1.1rem;
+    }
+
+    .github-link {
+        font-size: 1.2rem;
+    }
+}
+
+/* Dark Theme Support */
+[data-theme="dark"] .projects-container {
+  background-color: #1e1e1e;
+}
+
+[data-theme="dark"] .projects-title,
+[data-theme="dark"] .project-content p,
+[data-theme="dark"] .project-content h2 {
+  color: #f1f1f1;
+}
+
+[data-theme="dark"] .project-box {
+  background-color: #2a2a2a;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .project-box:hover {
+  box-shadow: 0 6px 15px rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .github-link,
+[data-theme="dark"] .github-icon {
+  color: #5ab1ff;
+}
+
+[data-theme="dark"] .github-link:hover {
+  color: #87cefa;
+}

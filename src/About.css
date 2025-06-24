@@ -1,0 +1,98 @@
+/* General Container Styling */
+.about-container {
+  width: 80%;
+  margin: auto;
+  padding: 40px;
+  text-align: center;
+  background-color: var(--box-bg-color); /* Matches other pages */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s forwards ease-in-out;
+  border: 2px solid transparent; /* Default transparent border */
+}
+
+/* Slide-up animation */
+@keyframes fadeInUp {
+  0% {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Title Styling */
+.about-container h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: var(--primary-text-color);
+}
+
+/* Profile Photo Styling */
+.about-photo {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 20px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Hover Effect on Photo */
+.about-photo:hover {
+  transform: scale(1.05);
+}
+
+/* Paragraph Styling */
+.about-container p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: justify;
+  color: var(--primary-text-color);
+}
+
+/* Hover Effect - Green Border */
+.about-container:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  border: 2px solid green;
+}
+
+/* Dark Mode Adjustments */
+[data-theme="dark"] .about-container {
+  background-color: #222;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .about-container h1,
+[data-theme="dark"] .about-container p {
+  color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .about-container {
+      width: 90%;
+      padding: 30px;
+  }
+
+  .about-container h1 {
+      font-size: 2.2rem;
+  }
+
+  .about-photo {
+      width: 120px;
+      height: 120px;
+  }
+
+  .about-container p {
+      font-size: 1.1rem;
+  }
+}
