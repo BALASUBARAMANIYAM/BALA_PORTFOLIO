@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/BALA_Portfolio/static/css/main.1e1d1397.css",
-    "main.js": "/BALA_Portfolio/static/js/main.b8f9f900.js",
+    "main.js": "/BALA_Portfolio/static/js/main.b9a17a4b.js",
     "static/media/Photo.jpeg": "/BALA_Portfolio/static/media/Photo.5deb48e63abc74643d29.jpeg",
     "index.html": "/BALA_Portfolio/index.html",
     "main.1e1d1397.css.map": "/BALA_Portfolio/static/css/main.1e1d1397.css.map",
-    "main.b8f9f900.js.map": "/BALA_Portfolio/static/js/main.b8f9f900.js.map"
+    "main.b9a17a4b.js.map": "/BALA_Portfolio/static/js/main.b9a17a4b.js.map"
   },
   "entrypoints": [
     "static/css/main.1e1d1397.css",
-    "static/js/main.b8f9f900.js"
+    "static/js/main.b9a17a4b.js"
   ]
 }
