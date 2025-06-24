@@ -1,12 +1,12 @@
-// index.js or main.jsx
+// index.js or App.js
 import React from "react";
-import ReactDOM from "react-dom/client";
-import { HashRouter } from 'react-router-dom';
+import ReactDOM from "react-dom";
 import App from "./App";
+import { HashRouter } from "react-router-dom";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
+ReactDOM.render(
   <HashRouter>
     <App />
-  </HashRouter>
+  </HashRouter>,
+  document.getElementById("root")
 );
